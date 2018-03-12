@@ -1,0 +1,22 @@
+{
+  "name": "eatjs",
+  "version": "1.0.0",
+  "description": "pet project that allows you to plan your weekly menu ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioAsr/pet.git"
+  },
+  "author": "Antonio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonioAsr/pet/issues"
+  },
+  "homepage": "https://github.com/AntonioAsr/pet#readme",
+  "dependencies": {
+    "react-redux": "^5.0.7"
+  }
+}
