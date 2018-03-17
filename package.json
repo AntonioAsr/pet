@@ -4,7 +4,8 @@
   "description": "pet project that allows you to plan your weekly menu ",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon ./db/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/AntonioAsr/pet#readme",
   "dependencies": {
+    "dotenv": "^5.0.1",
     "react-redux": "^5.0.7"
+  },
+  "devDependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.1"
   }
 }
