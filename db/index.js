@@ -8,10 +8,11 @@ var connect = mysql.createConnection({
     database: process.env.DB_NAME,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
-    port: process.env.DB_PORT
+    port: process.env.DB_PORT,
+    connectionLimit: 50
 });
 
-connect.connect(function(error){
+connect.connect((error)=>{
     if(error){
         console.log("error when trying to connet to db:"+error);
 
@@ -20,8 +21,8 @@ connect.connect(function(error){
     }
 })
 
-app.get('/', function(req, res){
-    connect.query("select * from menu", function(error,rows, fields){
+app.get('/', ((req, res)=>{
+    connect.query("select * from menu", ((error,rows, fields)=>{
         if(error){
             console.log("unable to fetch data from db")
         }else{
@@ -29,7 +30,7 @@ app.get('/', function(req, res){
             console.log(rows)
             res.send("hello the breakfast is: "+ rows[0].desayuno)
         }
-    });
-});
+    }))
+}))
 
 app.listen(process.env.WEB_PORT);
